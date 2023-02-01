@@ -59,6 +59,7 @@ export const GridWrapper = styled.main`
     position: absolute;
     left: 3px;
     top: calc(50% - 12.5px);
+    transition: 0.1s ease-in;
   }
   & div.darkSwith input[type="checkbox"]:checked::before {
     left: 33px;
