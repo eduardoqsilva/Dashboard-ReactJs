@@ -2,6 +2,11 @@ import { useState } from 'react'
 import { Card } from './components/Card'
 import { GridWrapper } from './components/Cardgrid/Grid.styles'
 
+import facebook from './assets/facebook.svg'
+import twitter from './assets/twitter.svg'
+import instagram from './assets/instagram.svg'
+import youtube from './assets/youtube.svg'
+
 function App() {
 
   const [darkMode, setDarkMode] = useState(true)
@@ -13,17 +18,21 @@ function App() {
      <GridWrapper>
       <div className='ContainerHeader'>
         <div className="titleWrapper">
-          <h1>Social Media Dashboard</h1>
+          <h2>Social Media Dashboard</h2>
           <span>Total Followers: 23.004</span>
         </div>
         <div className='darkSwith'>
           <label htmlFor="darkMode">Dark Mode</label>
-          <input onClick={handleToggleDarkMode} checked={darkMode} type="checkbox" name="" id="darkMode" />
+          <input 
+            onClick={handleToggleDarkMode} 
+            checked={darkMode} type="checkbox" 
+            id="darkMode"
+          />
         </div>
       </div>
         <Card
           user={'@eduodev'}
-          iconSrc={'./src/assets/facebook.svg'}
+          iconSrc={facebook}
           numberOf={'1987'}
           numberOfLegend={'followers'}
           legend={'12 Today'}
@@ -31,7 +40,7 @@ function App() {
         />
         <Card
           user={'@eduodev'}
-          iconSrc={'./src/assets/twitter.svg'}
+          iconSrc={twitter}
           numberOf={'1044'}
           numberOfLegend={'followers'}
           legend={'99 Today'}
@@ -39,7 +48,7 @@ function App() {
         />
         <Card
           user={'@eduodev'}
-          iconSrc={'./src/assets/instagram.svg'}
+          iconSrc={instagram}
           numberOf={'11k'}
           numberOfLegend={'followers'}
           legend={'12 Today'}
@@ -47,7 +56,7 @@ function App() {
         />
         <Card
           user={'@eduodev'}
-          iconSrc={'./src/assets/youtube.svg'}
+          iconSrc={youtube}
           numberOf={'8239'}
           numberOfLegend={'followers'}
           legend={'144 Today'}

@@ -17,7 +17,7 @@ export const GridWrapper = styled.main`
 
   & div.ContainerHeader {
     display: flex;
-    align-items: center; 
+    align-items: flex-start; 
     justify-content: space-between;
 
     grid-column: span 4;
