@@ -1,5 +1,10 @@
 import styled from 'styled-components'
 
+interface cardLegend {
+  loss: boolean
+}
+
+
 export const CardWrapperStyled = styled.div`
  
   width: 18.625rem;
@@ -21,7 +26,7 @@ export const CardWrapperStyled = styled.div`
 export const CardWrapperBorderStyled = styled.div`
   
   width: 100%;
-  height: 7px;
+  height: 5px;
   border-radius: 8px 8px 0 0;
   background-color: #188ff7;
 
@@ -62,14 +67,14 @@ export const CardTextWrapper = styled.div`
   flex-direction: column;
   align-items: center;
 `
-export const CardLegendText = styled.span`
-  color: #05cfb4;
+export const CardLegendText = styled.span<cardLegend>`
+  color: ${props => props.loss ? "#bc4d5c"  : "#05cfb4" };
   font-family: 'Roboto';
   font-size: 0.9rem;
   font-weight: bold;
 
   &::before{
-    content: '▴';
+    content: '${props => props.loss ? "▾" : "▴"}';
     display: inline-block;
     margin-right: 3px;
     font-weight: bold;

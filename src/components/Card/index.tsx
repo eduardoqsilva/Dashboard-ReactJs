@@ -6,12 +6,13 @@ import { CardH1Styled, CardIconAndUserStyled,
 interface CardProps{
   user: string
   iconSrc: string
-  numberOf: number
+  numberOf: string
   numberOfLegend: string
   legend: string
+  loss: boolean
 }
 
-export function Card({ user, iconSrc, numberOf, numberOfLegend, legend}: CardProps){
+export function Card({ user, iconSrc, numberOf, numberOfLegend, legend, loss}: CardProps){
 
   return(
     <CardWrapperStyled>
@@ -24,7 +25,7 @@ export function Card({ user, iconSrc, numberOf, numberOfLegend, legend}: CardPro
         <CardH1Styled>{numberOf}</CardH1Styled>
         <CardSpanStyled>{numberOfLegend}</CardSpanStyled>
       </CardTextWrapper>
-      <CardLegendText>{legend}</CardLegendText>
+      <CardLegendText loss={loss}>{legend}</CardLegendText>
     </CardWrapperStyled>
   )
 }
