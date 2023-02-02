@@ -10,13 +10,16 @@ interface CardProps{
   numberOfLegend: string
   legend: string
   loss: boolean
+  borderColors?: [string, string] | [string]
 }
 
-export function Card({ user, iconSrc, numberOf, numberOfLegend, legend, loss}: CardProps){
+export function Card({ user, iconSrc, numberOf,
+   numberOfLegend, legend, loss = false, 
+   borderColors = ['#188ff7'] }: CardProps) {
 
   return(
     <CardWrapperStyled>
-      <CardWrapperBorderStyled/>
+      <CardWrapperBorderStyled borderColors={borderColors}/>
       <CardIconAndUserStyled>
         <img src={iconSrc}/>
         <span>{user}</span>

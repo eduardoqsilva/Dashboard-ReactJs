@@ -29,6 +29,10 @@ export const GridWrapper = styled.main`
     margin-bottom: 2rem;
   }
 
+  & .titleWrapper > span{
+    opacity: 0.5;
+  }
+
   & div .darkSwith {
     display: flex;
     align-items: center;

@@ -3,6 +3,9 @@ import styled from 'styled-components'
 interface cardLegend {
   loss: boolean
 }
+interface cardBorderColor{
+  borderColors: [string, string] | [string]
+}
 
 
 export const CardWrapperStyled = styled.div`
@@ -23,12 +26,13 @@ export const CardWrapperStyled = styled.div`
   padding: 1rem;
   
 `
-export const CardWrapperBorderStyled = styled.div`
+export const CardWrapperBorderStyled = styled.div<cardBorderColor>`
   
   width: 100%;
   height: 5px;
   border-radius: 8px 8px 0 0;
-  background-color: #188ff7;
+  background: ${props => props.borderColors.length <= 1 ? props.borderColors[0] : 
+   `linear-gradient(90deg, ${props.borderColors[0]} -50%, ${props.borderColors[1]} 100%)`};
 
   position: absolute;
   top: 0;

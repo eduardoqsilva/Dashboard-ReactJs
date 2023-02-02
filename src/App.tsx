@@ -45,6 +45,7 @@ function App() {
           numberOfLegend={'followers'}
           legend={'99 Today'}
           loss={false}
+          borderColors={['#1da2ef']}
         />
         <Card
           user={'@eduodev'}
@@ -53,15 +54,21 @@ function App() {
           numberOfLegend={'followers'}
           legend={'12 Today'}
           loss={false}
+          borderColors={["#FCC676","#DE4C93"]}
         />
         <Card
           user={'@eduodev'}
           iconSrc={youtube}
           numberOf={'8239'}
-          numberOfLegend={'followers'}
+          numberOfLegend={'subscribers'}
           legend={'144 Today'}
           loss={true}
+          borderColors={['#ff0202']}
         />
+
+        <div>
+          <h2>Overview - Today</h2>
+        </div>
      </GridWrapper>
   )
 }

@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body{
     background-color: #1d2029;
+    color: #fff;
 
     &::before{
       content: '';
