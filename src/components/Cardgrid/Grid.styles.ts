@@ -72,4 +72,14 @@ export const GridWrapper = styled.main`
   & div.darkSwith input[type="checkbox"]:checked{
     background: linear-gradient(90deg, rgba(91,190,255,1) -50%, rgba(68,208,146,1) 100%);
   }
+
+  & div.title {
+    grid-column: span 4;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  & div.title > h2 {
+    font-family: 'Roboto';
+  }
 `

@@ -8,7 +8,7 @@ interface cardBorderColor{
 }
 
 
-export const CardWrapperStyled = styled.div`
+export const CardWrapperStyled = styled.section`
  
   width: 18.625rem;
   height: 15rem;
@@ -83,6 +83,46 @@ export const CardLegendText = styled.span<cardLegend>`
     margin-right: 3px;
     font-weight: bold;
     font-size: 1rem;
+  }
+`
+
+
+//--------------------CardResume----------------
+
+export const CardResumeWrapperStyled = styled.section`
+  width: 18.625rem;
+  height: 8.5rem;
+  background-color:  #252b43;
+  border-radius: 8px;
+  padding: 1.8rem;
+
+  display: flex;
+  justify-content: space-between;
+
+
+  & div.text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  & div.text span {
+    font-family: 'Roboto';
+    font-size: 0.8rem;
+    opacity: 0.5;
+  }
+  & div.text h2 {
+    font-size: 2rem;
+    font-family: 'Roboto';
+    line-height: 1;
+  }
+
+  & div.legend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 `
 

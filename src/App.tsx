@@ -1,20 +1,22 @@
 import { useState } from 'react'
-import { Card } from './components/Card'
+import { Card, CardResume } from './components/Card'
 import { GridWrapper } from './components/Cardgrid/Grid.styles'
 
 import facebook from './assets/facebook.svg'
 import twitter from './assets/twitter.svg'
 import instagram from './assets/instagram.svg'
 import youtube from './assets/youtube.svg'
+import { HeaderContainer } from './components/HeaderConteiner/HeaderContainer.styles'
 
 function App() {
 
   const [darkMode, setDarkMode] = useState(true)
 
   function handleToggleDarkMode() {
-    darkMode ? setDarkMode(false) : setDarkMode(true)
+    setDarkMode((dark) => dark === true ? dark = false : dark = true)
   }
   return (
+    <HeaderContainer>
      <GridWrapper>
       <div className='ContainerHeader'>
         <div className="titleWrapper">
@@ -24,8 +26,10 @@ function App() {
         <div className='darkSwith'>
           <label htmlFor="darkMode">Dark Mode</label>
           <input 
-            onClick={handleToggleDarkMode} 
-            checked={darkMode} type="checkbox" 
+            onChange={handleToggleDarkMode} 
+            checked={darkMode} 
+            
+            type="checkbox" 
             id="darkMode"
           />
         </div>
@@ -66,10 +70,60 @@ function App() {
           borderColors={['#ff0202']}
         />
 
-        <div>
+        <div className='title'>
           <h2>Overview - Today</h2>
         </div>
+
+        <CardResume
+          textLegend='Page Views'
+          iconSrc={facebook}
+          porcent={'3%'}
+          loss={false} 
+          number={'87'}        />
+         <CardResume
+          textLegend='Likes'
+          iconSrc={facebook}
+          porcent={'2%'}
+          loss={true} 
+          number={'52'}        />
+         <CardResume
+          textLegend='Likes'
+          iconSrc={instagram}
+          porcent={'2257%'}
+          loss={false} 
+          number={'5462'}        />
+         <CardResume
+          textLegend='Profile Views'
+          iconSrc={instagram}
+          porcent={'1375%'}
+          loss={false} 
+          number={'52k'}        />
+         <CardResume
+          textLegend='Retweets'
+          iconSrc={twitter}
+          porcent={'303%'}
+          loss={false} 
+          number={'117'}        />
+         <CardResume
+          textLegend='Likes'
+          iconSrc={twitter}
+          porcent={'553%'}
+          loss={false} 
+          number={'507'}        />
+         <CardResume
+          textLegend='Likes'
+          iconSrc={youtube}
+          porcent={'10%'}
+          loss={true} 
+          number={'107'}        />
+         <CardResume
+          textLegend='Total Views'
+          iconSrc={youtube}
+          porcent={'12%'}
+          loss={true} 
+          number={'1407'}        />
      </GridWrapper>
+    </HeaderContainer>
   )
 }
 

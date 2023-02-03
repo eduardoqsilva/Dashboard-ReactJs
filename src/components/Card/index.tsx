@@ -1,7 +1,7 @@
 import { CardH1Styled, CardIconAndUserStyled,
    CardLegendText, CardSpanStyled,
     CardTextWrapper, CardWrapperBorderStyled,
-     CardWrapperStyled } from './Card.style'
+     CardWrapperStyled, CardResumeWrapperStyled } from './Card.style'
 
 interface CardProps{
   user: string
@@ -11,6 +11,14 @@ interface CardProps{
   legend: string
   loss: boolean
   borderColors?: [string, string] | [string]
+}
+
+interface CardResume{
+  loss: boolean
+  porcent: string
+  iconSrc: string
+  textLegend: string;
+  number: string
 }
 
 export function Card({ user, iconSrc, numberOf,
@@ -30,5 +38,20 @@ export function Card({ user, iconSrc, numberOf,
       </CardTextWrapper>
       <CardLegendText loss={loss}>{legend}</CardLegendText>
     </CardWrapperStyled>
+  )
+}
+
+export function CardResume({loss, porcent, iconSrc, textLegend, number}:CardResume) {
+  return(
+    <CardResumeWrapperStyled>
+      <div className='text'>
+        <span>{textLegend}</span>
+        <h2>{number}</h2>
+      </div>
+      <div className='legend'>
+        <img src={iconSrc}/>
+        <CardLegendText loss={loss}>{porcent}</CardLegendText>
+      </div>
+    </CardResumeWrapperStyled>
   )
 }
