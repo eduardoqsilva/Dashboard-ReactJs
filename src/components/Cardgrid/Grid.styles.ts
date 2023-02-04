@@ -22,7 +22,7 @@ export const GridWrapper = styled.main`
 
     grid-column: span 4;
 
-    color: #fff;
+    color: ${(props) => props.theme.textColor};
     font-family: 'Roboto';
 
     margin-top: 4rem;
@@ -58,7 +58,7 @@ export const GridWrapper = styled.main`
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background-color: #232c44;
+    background-color: ${(props) => props.theme.headerBackgroundSecundary};
 
     position: absolute;
     left: 3px;

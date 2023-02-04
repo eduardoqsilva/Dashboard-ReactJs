@@ -5,14 +5,14 @@ export const HeaderContainer = styled.header`
   width: 100vw;
   height: 100vh;
 
-  background-color: #1d2029;
+  background-color: ${(props) => props.theme.headerBackground};
   color: #fff;
 
   &::before{
     content: '';
     width: 100%;
     height: 300px;
-    background-color: #20222f;
+    background-color:${(props) => props.theme.headerBackgroundSecundary};
 
     position: absolute;
     top: 0;

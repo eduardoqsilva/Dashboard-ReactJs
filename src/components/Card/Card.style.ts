@@ -12,9 +12,9 @@ export const CardWrapperStyled = styled.section`
  
   width: 18.625rem;
   height: 15rem;
-  background-color: #252b43;
+  background-color: ${(props) => props.theme.CardBackground};
   border-radius: 8px;
-  color: #ffff;
+  color: ${(props) => props.theme.textColor};
   text-align: center;
 
   position: relative;
@@ -59,11 +59,11 @@ export const CardH1Styled = styled.h1`
 `
 export const CardSpanStyled = styled.span`
   font-family: 'Montserrat';
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  opacity: 0.5;
+  opacity: 0.7;
   margin-left: 10px;
 `
 export const CardTextWrapper = styled.div`
@@ -92,10 +92,10 @@ export const CardLegendText = styled.span<cardLegend>`
 export const CardResumeWrapperStyled = styled.section`
   width: 18.625rem;
   height: 8.5rem;
-  background-color:  #252b43;
+  background-color:  ${(props) => props.theme.CardBackground};
   border-radius: 8px;
   padding: 1.8rem;
-
+  color: ${(props) => props.theme.textColor};
   display: flex;
   justify-content: space-between;
 
@@ -110,7 +110,7 @@ export const CardResumeWrapperStyled = styled.section`
   & div.text span {
     font-family: 'Roboto';
     font-size: 0.8rem;
-    opacity: 0.5;
+    opacity: 0.6;
   }
   & div.text h2 {
     font-size: 2rem;

@@ -44,7 +44,7 @@ export function Card({ user, iconSrc, numberOf,
 export function CardResume({loss, porcent, iconSrc, textLegend, number}:CardResume) {
   return(
     <CardResumeWrapperStyled>
-      <div className='text'>
+      <div className='text'> 
         <span>{textLegend}</span>
         <h2>{number}</h2>
       </div>
