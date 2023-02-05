@@ -8,9 +8,8 @@ export const GridWrapper = styled.main`
 
   display: grid;
   grid-template-columns: repeat(4, auto);
-  grid-template-rows: auto auto;
+  grid-template-rows: auto;
   gap: 1rem;
-  grid-template-areas: header;
   margin: auto;
   position: relative;
   z-index: 10;
@@ -82,5 +81,49 @@ export const GridWrapper = styled.main`
 
   & div.title > h2 {
     font-family: 'Roboto';
+  }
+
+
+
+  @media(max-width: 1300px){
+    grid-template-columns: repeat(2, auto);
+    gap: 1rem;
+    
+    & div.ContainerHeader {
+      grid-column: span 2;
+    }
+    & div.title {
+      grid-column: span 2;
+    }
+  }
+
+  @media(max-width: 650px){
+    grid-template-columns: repeat(1, auto);
+    gap: 2rem;
+    justify-items: center;
+    padding: 0 1rem 3rem 1rem;
+    
+    & div.ContainerHeader {
+      grid-column: span 1;
+    }
+    & div.title {
+      grid-column: span 1;
+    }
+    & .titleWrapper {
+      line-height: 1.5;
+    }
+    & div.ContainerHeader {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+    & div.ContainerHeader{
+      width: 100%;
+    }
+    & div.darkSwith{
+      width: 100%;
+      justify-content: space-between;
+      padding: 1rem 0 0 0;
+      border-top: 1px solid rgba(255,255,255,0.3);
+    }
   }
 `
