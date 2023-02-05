@@ -123,7 +123,7 @@ export const GridWrapper = styled.main`
       width: 100%;
       justify-content: space-between;
       padding: 1rem 0 0 0;
-      border-top: 1px solid rgba(255,255,255,0.3);
+      border-top: 1px solid ${(props) => props.theme.border};
     }
   }
 `

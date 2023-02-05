@@ -8,4 +8,7 @@ export const lightTheme = {
   
   //card
   CardBackground: '#f0f3fb',
+
+  //border
+  border: 'rgba(22, 27, 34, 0.5)',
 }

@@ -8,4 +8,7 @@ export const darkTheme = {
   
   //card
   CardBackground: '#252b43',
+
+  //border
+  border: 'rgba(255,255,255,0.3)',
 }
