@@ -3,13 +3,13 @@ import { Card, CardResume } from './components/Card'
 import { GridWrapper } from './components/Cardgrid/Grid.styles'
 import { HeaderContainer } from './components/HeaderConteiner/HeaderContainer.styles'
 import { ThemeProvider } from 'styled-components'
+import { darkTheme } from './styles/themes/dark'
+import { lightTheme } from './styles/themes/light'
 
 import facebook from './assets/facebook.svg'
 import twitter from './assets/twitter.svg'
 import instagram from './assets/instagram.svg'
 import youtube from './assets/youtube.svg'
-import { darkTheme } from './styles/themes/dark'
-import { lightTheme } from './styles/themes/light'
 
 function App() {
 

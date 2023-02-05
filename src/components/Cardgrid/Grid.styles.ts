@@ -77,6 +77,7 @@ export const GridWrapper = styled.main`
     grid-column: span 4;
     margin-top: 1rem;
     margin-bottom: 0.5rem;
+    color: ${(props) => props.theme.textColor}
   }
 
   & div.title > h2 {
