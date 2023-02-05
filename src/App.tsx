@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { Card, CardResume } from './components/Card'
 import { GridWrapper } from './components/Cardgrid/Grid.styles'
 import { HeaderContainer } from './components/HeaderConteiner/HeaderContainer.styles'
@@ -14,10 +14,24 @@ import youtube from './assets/youtube.svg'
 function App() {
 
   const [darkMode, setDarkMode] = useState(true)
+  
+  useEffect(() => {
+    if(localStorage.getItem('darkMode') !== null){
+      localStorage.getItem('darkMode') === 'true' ? setDarkMode(true) : setDarkMode(false) 
+    }
+  }, [])
+  
+  useEffect(() => {
+    const value = darkMode ? 'true' : 'false'
+    localStorage.setItem('darkMode', value)
+    console.log("salvou: " + localStorage.getItem('darkMode'))
+  }, [darkMode]) 
 
   function handleToggleDarkMode() {
     setDarkMode((dark) => dark === true ? dark = false : dark = true)
   }
+  
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <HeaderContainer>
